@@ -16,4 +16,12 @@ class UsersController extends Controller
         return $users;
 
     }
+
+    public function productsByUser(User $user){
+
+        $products = $user->products;
+
+        return view('productsByUser', compact('products'));
+
+    }
 }

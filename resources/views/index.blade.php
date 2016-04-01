@@ -7,6 +7,7 @@
     <ul>
         <li> <a href="{{url('one-to-one')}}">one - one</a> </li>
         <li> <a href="{{url('one-to-many')}}">one - many</a> </li>
+        <li> <a href="{{url('many-to-many')}}">many - many</a> </li>
     </ul>
 
 @stop

@@ -36,3 +36,10 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'post' => $faker->paragraph
     ];
 });
+
+$factory->define(App\Product::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word,
+        'price' => $faker->numberBetween(1, 1000)
+    ];
+});
