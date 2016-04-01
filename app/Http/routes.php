@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
+
+Route::get('one-to-one', 'PagesController@oneToOne');
+Route::get('one-to-many', 'PagesController@oneToMany');

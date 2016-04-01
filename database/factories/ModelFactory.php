@@ -19,3 +19,20 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Credential::class, function (Faker\Generator $faker) {
+    return [
+        'type' => $faker->sentence,
+        'user_id' => $faker->unique()->numberBetween(0, 10),
+        'description' => $faker->paragraph,
+        'date_expire' => $faker->dateTime('now', '+ 10 days')
+    ];
+});
+
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->numberBetween(0, 10),
+        'title' => $faker->sentence,
+        'post' => $faker->paragraph
+    ];
+});
