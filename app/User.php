@@ -42,4 +42,10 @@ class User extends Authenticatable
 
     }
 
+    public function games(){
+
+        return $this->hasManyThrough('App\Game', 'App\Console', 'user_id', 'console_id');
+
+    }
+
 }

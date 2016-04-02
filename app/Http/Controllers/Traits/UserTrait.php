@@ -37,6 +37,12 @@ trait UserTrait{
 
     }
 
+    public function getGamesThroughConsole(User $user){
+
+        return $user->games;
+
+    }
+
 
 }
 

@@ -24,4 +24,12 @@ class UsersController extends Controller
         return view('productsByUser', compact('products'));
 
     }
+
+    public function gamesByUser(User $user){
+
+        $games = $user->games;
+
+        return view('gamesByUser', compact('games'));
+
+    }
 }

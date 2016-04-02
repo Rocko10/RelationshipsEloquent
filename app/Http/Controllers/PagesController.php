@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Traits\UserTrait;
 use App\Product;
+use App\User;
 
 class PagesController extends Controller
 {
@@ -52,6 +53,14 @@ class PagesController extends Controller
     public function usersByProduct(){
 
         return view('usersByProduct');
+
+    }
+
+    public function manyThrough(User $user){
+
+        $users = $this->getUsers();
+
+        return view('manyThrough', compact('users'));
 
     }
 

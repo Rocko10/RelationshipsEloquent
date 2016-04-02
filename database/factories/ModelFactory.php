@@ -43,3 +43,20 @@ $factory->define(App\Product::class, function (Faker\Generator $faker) {
         'price' => $faker->numberBetween(1, 1000)
     ];
 });
+
+$factory->define(App\Console::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->numberBetween(0, 10),
+        'name' => $faker->word,
+        'plataform' => $faker->word,
+        'price' => $faker->numberBetween(1000, 10000)
+    ];
+});
+
+$factory->define(App\Game::class, function (Faker\Generator $faker) {
+    return [
+        'console_id' => $faker->numberBetween(0, 10),
+        'title' => $faker->sentence,
+        'description' => $faker->paragraph
+    ];
+});
